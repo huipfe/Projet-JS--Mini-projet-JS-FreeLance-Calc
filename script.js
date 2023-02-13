@@ -1,0 +1,1 @@
+//Faire un script qui permet de se calculer, ce qu'on gagne, en temps que freelance.git remote add origin https://github.com/huipfe/S-INITIER-A-LA-PROGRAMMATION-AVEC-JS--Mini-projet-JS-1.git
