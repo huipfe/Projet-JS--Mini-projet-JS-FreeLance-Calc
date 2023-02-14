@@ -1,3 +1,21 @@
+h1 {
+    text-align: center;
+}
+
+h1,
+h4 {
+    color: #154440;
+}
+
+.formCalcul {
+    padding: 15px;
+    border: solid 1px #154440;
+    border-radius: 2%;
+    max-width: 500px;
+    margin: auto;
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
 .formCalcul .sectionCalcul {
     margin: 15px;
 }
@@ -7,3 +25,36 @@
     justify-content: space-around;
 }
 
+.form-container div {
+    padding: 15px;
+}
+
+body {
+    /* background-color: #7fadaa; */
+    background-image: url("image/scattered-forcefields.svg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.resultDiv {
+    text-align: center;
+    font-weight: 500;
+    border: solid 1px #154440;
+    border-radius: 5%;
+    min-width: 140px;
+}
+
+.resultBrut {
+    background-color: #c25050;
+    color: white;
+}
+
+.resultDifference {
+    background-color: #717473;
+    color: white;
+}
+
+.resultNet {
+    background-color: #28a162;
+    color: white;
+}
