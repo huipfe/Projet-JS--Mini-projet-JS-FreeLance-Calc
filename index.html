@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>Mini Projet JS - Calc Freelance</title>
 </head>
 <body>
@@ -21,15 +21,15 @@
                 <h4>Vos tarifs</h4>
                 <div class="form-container">
                     <div class="form-field">
-                        <label class="form-text">TH</label>
+                        <label class="form-text">Gain par heure</label>
                         <input class="form-control" name="TH" type="number" placeholder="Ex : 70" />
                     </div>
                     <div class="form-field">
-                        <label class="form-text">TJM</label>
+                        <label class="form-text">Gain par jour</label>
                         <input class="form-control" name="TJM" type="number" placeholder="Ex : 740" />
                     </div>
                     <div class="form-field">
-                        <label class="form-text">Extras</label>
+                        <label class="form-text">Gain Extras</label>
                         <input class="form-control" name="Extras" type="number" placeholder="Ex : 47" />
                     </div>
                 </div>
@@ -38,16 +38,16 @@
                 <h4>Quantités</h4>
                 <div class="form-container">
                     <div class="form-field">
-                        <label class="form-text">TH</label>
+                        <label class="form-text">Nb d'Heure</label>
                         <input class="form-control" name="QteTH" type="number"
                             placeholder="Ex : 140" />
                     </div>
                     <div class="form-field">
-                        <label class="form-text">TJM</label>
+                        <label class="form-text">Nb de Jours</label>
                         <input class="form-control" name="QteTJM" type="number" placeholder="Ex : 30" />
                     </div>
                     <div class="form-field">
-                        <label class="form-text">Extras</label>
+                        <label class="form-text">Nb d'Extras</label>
                         <input class="form-control" name="QteExtras" type="number" placeholder="Ex : 7" />
                     </div>
                 </div>
@@ -56,13 +56,14 @@
                 <h4>Charges</h4>
                 <div class="form-container">
                     <div class="form-field">
-                        <label class="form-text">Charge </label>
-                        <input class="form-control" name="Charges" type="number" placeholder="Ex : 140" />
+                        <label class="form-text">Charge en %</label>
+                        <input class="form-control" name="Charges" type="number" placeholder="Ex : 22" />
                     </div>
                 </div>
             </div>
             <div class="sectionCalcul validation text-center">
-                <button onclick="CalculGain()" id="buttonValidation" type="button" class="btn btn-primary">Calculer</button>
+                <button id="buttonValidation" type="button" class="btn btn-primary">Calculer</button>
+                <!-- onclick="CalculGain()" -->
             </div>
     
             <div class="sectionCalcul result">
@@ -89,12 +90,12 @@
     
     <!-- Optional JavaScript -->
     <!-- Popper.js first, then Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
 </body>
 </html>
-
