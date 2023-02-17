@@ -46,9 +46,11 @@ function CalculGain () {
     
     //Mettre le résultat de totalBrut dans le boutton BRUT
     //Pour se faire, on récupère l'id du boutton rouge BRUT
-    document.getElementById("resultatBrut").innerText = totalBrut.toFixed(2) + " €"
+    // document.getElementById("resultatBrut").innerText = totalBrut.toFixed(2) + " €"
     //Et on lui change son texte, pour afficher le résultat de totalBrut, avec innerText = le total Brut + le sigle euro en caractère
     
+
+
 
     //Faire le calcul des charges 
     //totalBrut - charges%
@@ -59,14 +61,61 @@ function CalculGain () {
     let totalNet = totalBrut - chargeADeduire;
     
     //Résultat charges à déduire
-    document.getElementById("resultatDifference").innerText = chargeADeduire.toFixed(2) + " €"
+    // document.getElementById("resultatDifference").innerText = chargeADeduire.toFixed(2) + " €"
 
     //Résultat Net 
-    document.getElementById("resultatNet").innerText = totalNet.toFixed(2) + " €"
+    // document.getElementById("resultatNet").innerText = totalNet.toFixed(2) + " €"
+
+    //Animer le résultat 
+    animateCompteur("resultatBrut", totalBrut)
+
+    // let intervalBrut = setInterval(animateCompteur, 1000 / totalBrut, "resultatBrut", totalBrut);
+
+    animateCompteur("resultatDifference", chargeADeduire)
+
+    
+
+    animateCompteur("resultatNet", totalNet)
 
 
 }
 
+//Fonction d'animation
+async function animateCompteur(idARemplacer, total) {
+    let cpt = 0; 
+    let animationDuration = 70;
+    let monElementHtmlDeResultat = document.getElementById(idARemplacer); 
+    //Total c'est 140
+    //Compter 140 en 1000seconde, 1000ms
+
+    // let increment = total / 10 
+    // if (total >= 100){
+    //     increment = 10
+    // }
+    // else if (total >= 1000){
+    //     increment = 100
+    // }
+    //Si mon résultat est different, alors il sera remplacer, on peut ajouter les taxes, sans que le résultat brut soit réinitialiser
+    if (monElementHtmlDeResultat.innerText != total.toFixed(2) + " €") {
+        let increment = Math.round(total / 10 );
+        if(increment==0)
+        increment=1;
+        //tant que cpt (compteur) est plus petit ou égale au total, alors
+        while (cpt <= total) {
+            monElementHtmlDeResultat.innerText = cpt.toFixed(2) + " €"
+            //Attendre un petit peu, pour voir l'animation
+            await timer(animationDuration);
+            cpt += increment;
+        }
+        
+        monElementHtmlDeResultat.innerText = total.toFixed(2) + " €"
+    }
+}
+
+//Fonction pour le timer
+function timer(ms){
+    return new Promise(res => setTimeout(res, ms));
+}
 
 //Fonction pour sauve ses derniers calculs, dans des cookies.
 
@@ -157,3 +206,14 @@ function verifierInputs() {
  * 
  */
 
+    //Animation
+    // document.getElementById("resultatBrut").animate([
+    //     //étapes Keyframes
+    //     { transform: 'translateY(0px)' },
+    //     { transform: 'translateY(300px)' },
+    // ], {
+    //     //Temporisation
+    //     duration: 1000,
+    //     interation: Infinity
+
+    // });
